@@ -1,0 +1,8 @@
+{
+  "name": "EdTech CRM & Student Admissions Inquiry System",
+  "description": "Full-stack EdTech CRM and inquiry management system featuring public student inquiry capture, multi-stage counselor admissions Kanban, lead scoring, activity logging, conversion analytics, and Python FastAPI + React architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

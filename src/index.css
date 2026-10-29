@@ -1,0 +1,228 @@
+/* Import Bootstrap 5 CSS */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* Universal Design & Typography Variables */
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Brand Academic Navy */
+  --bs-primary: #1e3a8a;
+  --bs-primary-rgb: 30, 58, 138;
+  --bs-primary-hover: #172554;
+  --bs-body-bg: #f8fafc;
+  --bs-body-color: #1e293b;
+  --bs-border-color: rgba(0, 0, 0, 0.08);
+
+  --color-success-dark: #15803d;
+  --color-amber-dark: #b45309;
+  --color-indigo-dark: #4338ca;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tabular figures for all financial, tracking, and timestamp numerals */
+.font-tabular,
+.tabular-nums,
+[data-tabular] {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
+/* Custom Navigation & Top Bar */
+.crm-navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.crm-brand-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.nav-link-btn {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #64748b;
+  border: none;
+  background: transparent;
+  padding: 0.5rem 0.85rem;
+  border-radius: 6px;
+  transition: all 0.15s ease-in-out;
+  white-space: nowrap;
+}
+
+.nav-link-btn:hover {
+  color: #0f172a;
+  background-color: #f1f5f9;
+}
+
+.nav-link-btn.active {
+  color: #1e3a8a;
+  background-color: #eff6ff;
+  font-weight: 600;
+}
+
+/* High-Trust Card Elevation */
+.crm-card {
+  background-color: #ffffff;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.crm-card:hover {
+  border-color: rgba(30, 58, 138, 0.2);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Kanban Board Column Styling */
+.kanban-column {
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+}
+
+.kanban-header {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kanban-count-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  color: #475569;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.lead-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 0.85rem 0.95rem;
+  margin-bottom: 0.65rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.lead-card:hover {
+  transform: translateY(-2px);
+  border-color: #93c5fd;
+  box-shadow: 0 6px 14px -2px rgba(15, 23, 42, 0.08);
+}
+
+/* Stage color badges */
+.stage-badge {
+  font-size: 0.725rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.stage-NEW {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.stage-CONTACTED {
+  background-color: #fefce8;
+  color: #a16207;
+  border: 1px solid #fef08a;
+}
+
+.stage-COUNSELING_SCHEDULED {
+  background-color: #faf5ff;
+  color: #7e22ce;
+  border: 1px solid #e9d5ff;
+}
+
+.stage-APPLICATION_SUBMITTED {
+  background-color: #ecfeff;
+  color: #0e7490;
+  border: 1px solid #a5f3fc;
+}
+
+.stage-ENROLLED {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.stage-DROPPED {
+  background-color: #f8fafc;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+/* Lead score badge */
+.score-badge-high {
+  background-color: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.score-badge-medium {
+  background-color: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.score-badge-low {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Clean Form Controls */
+.form-control:focus,
+.form-select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Modal Drawer Backdrop */
+.modal-backdrop-blur {
+  background-color: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(2px);
+}
